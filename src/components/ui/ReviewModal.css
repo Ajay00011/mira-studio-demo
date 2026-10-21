@@ -1,0 +1,197 @@
+/* ===================================================================
+   ReviewModal — Interactive Review Submission Dialog
+   =================================================================== */
+
+.review-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  opacity: 0;
+  animation: modal-fade 0.25s var(--ease-out) forwards;
+}
+
+@keyframes modal-fade {
+  to { opacity: 1; }
+}
+
+.review-modal {
+  position: relative;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  max-width: 540px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-border);
+  transform: translateY(16px);
+  animation: modal-slide 0.3s var(--ease-out) forwards;
+}
+
+@keyframes modal-slide {
+  to { transform: translateY(0); }
+}
+
+.review-modal__close-btn {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.review-modal__close-btn:hover {
+  background-color: var(--color-bg-alt);
+  color: var(--color-text);
+}
+
+.review-modal__header {
+  margin-bottom: var(--space-lg);
+}
+
+.review-modal__eyebrow {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 2px;
+}
+
+.review-modal__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-medium);
+  color: var(--color-text);
+}
+
+/* ── Interactive Star Rating Picker ───────────────────────────────── */
+.star-picker {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.star-picker__label {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.star-picker__stars-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.star-picker__star-btn {
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: #d8d3cb;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color var(--duration-fast) var(--ease-out),
+              transform var(--duration-fast) var(--ease-out);
+}
+
+.star-picker__star-btn.active,
+.star-picker__star-btn.hovered {
+  color: #d4943a;
+  transform: scale(1.1);
+}
+
+.star-picker__feedback {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--color-accent);
+}
+
+/* ── Fit Option Selector ──────────────────────────────────────────── */
+.fit-selector {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.fit-selector__options {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.fit-selector__btn {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  text-align: center;
+  transition: var(--transition-fast);
+}
+
+.fit-selector__btn.active {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary);
+}
+
+/* ── Modal Form ───────────────────────────────────────────────────── */
+.review-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.review-modal-form__submit {
+  width: 100%;
+  margin-top: var(--space-sm);
+}
+
+/* ── Success Confirmation inside Modal ────────────────────────────── */
+.review-modal-success {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.review-modal-success__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  background-color: #ebf5ee;
+  color: var(--color-success);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: badge-pop 0.4s var(--ease-spring);
+}

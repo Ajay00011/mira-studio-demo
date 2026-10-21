@@ -1,0 +1,146 @@
+/* ===================================================================
+   ReviewSummary — Rating Breakdown & Fit Meter
+   =================================================================== */
+
+.review-summary {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  padding: var(--space-2xl);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xs);
+  margin-bottom: var(--space-2xl);
+}
+
+@media (min-width: 800px) {
+  .review-summary {
+    grid-template-columns: 1fr 1.6fr auto;
+    align-items: center;
+    gap: var(--space-2xl);
+  }
+}
+
+/* ── Score Column (Left) ─────────────────────────────────────────── */
+.review-summary__score-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-xs);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+@media (min-width: 800px) {
+  .review-summary__score-col {
+    padding-bottom: 0;
+    border-bottom: none;
+    border-right: 1px solid var(--color-border-light);
+    padding-right: var(--space-xl);
+  }
+}
+
+.review-summary__score {
+  font-family: var(--font-heading);
+  font-size: var(--fs-5xl);
+  font-weight: var(--fw-semibold);
+  line-height: 1;
+  color: var(--color-text);
+}
+
+.review-summary__stars {
+  color: #d4943a;
+  font-size: var(--fs-lg);
+  letter-spacing: 2px;
+}
+
+.review-summary__count {
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+}
+
+.review-summary__fit-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: var(--fw-medium);
+  color: var(--color-accent);
+  background-color: var(--color-bg-alt);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  margin-top: var(--space-xs);
+}
+
+/* ── Distribution Bars Column (Center) ───────────────────────────── */
+.review-summary__bars-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.review-bar-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+}
+
+.review-bar-row__label {
+  min-width: 48px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.review-bar-row__track {
+  flex: 1;
+  height: 8px;
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.review-bar-row__fill {
+  height: 100%;
+  background-color: #d4943a;
+  border-radius: var(--radius-full);
+  transition: width var(--duration-base) var(--ease-out);
+}
+
+.review-bar-row__count {
+  min-width: 24px;
+  text-align: right;
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+/* ── CTA Column (Right) ──────────────────────────────────────────── */
+.review-summary__action-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-xs);
+  padding-top: var(--space-md);
+}
+
+@media (min-width: 800px) {
+  .review-summary__action-col {
+    padding-top: 0;
+    min-width: 180px;
+  }
+}
+
+.review-summary__write-btn {
+  width: 100%;
+}
+
+.review-summary__verified-note {
+  font-size: 10px;
+  color: var(--color-text-muted);
+}

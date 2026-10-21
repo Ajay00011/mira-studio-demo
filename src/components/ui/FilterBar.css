@@ -1,0 +1,194 @@
+/* ===================================================================
+   FilterBar — Editorial Filter, Search & Sort Bar
+   =================================================================== */
+
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ── Top Row: Category Pills ──────────────────────────────────────── */
+.filter-bar__categories {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  overflow-x: auto;
+  padding-bottom: var(--space-xs);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.filter-bar__categories::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-bar__category-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  background-color: var(--color-surface);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--transition-fast);
+}
+
+.filter-bar__category-btn:hover {
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+
+.filter-bar__category-btn.active {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary);
+}
+
+.filter-bar__category-count {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+/* ── Controls Row: Search & Sort ──────────────────────────────────── */
+.filter-bar__controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+@media (min-width: 640px) {
+  .filter-bar__controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* Search Box */
+.filter-bar__search {
+  position: relative;
+  flex: 1;
+  max-width: 420px;
+}
+
+.filter-bar__search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.filter-bar__search-input {
+  width: 100%;
+  padding: 10px 36px 10px 38px;
+  font-size: var(--fs-sm);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+}
+
+.filter-bar__search-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-light);
+}
+
+.filter-bar__search-clear {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  color: var(--color-text-muted);
+  background-color: var(--color-bg-alt);
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.filter-bar__search-clear:hover {
+  color: var(--color-text);
+  background-color: var(--color-border);
+}
+
+/* Sort & Count Group */
+.filter-bar__sort-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-left: auto;
+}
+
+.filter-bar__sort-label {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.filter-bar__sort-select {
+  padding: 10px 14px;
+  font-size: var(--fs-sm);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.filter-bar__sort-select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+/* ── Status Row ───────────────────────────────────────────────────── */
+.filter-bar__status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+  padding-top: var(--space-2xs);
+}
+
+.filter-bar__reset-btn {
+  font-size: var(--fs-xs);
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: var(--transition-fast);
+}
+
+.filter-bar__reset-btn:hover {
+  color: var(--color-accent-hover);
+}

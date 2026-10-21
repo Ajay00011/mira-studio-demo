@@ -1,0 +1,48 @@
+/* ===================================================================
+   QuantitySelector — Minimal Stepper Component
+   =================================================================== */
+
+.quantity-selector {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  height: 48px;
+  width: fit-content;
+  user-select: none;
+}
+
+.quantity-selector__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 100%;
+  color: var(--color-text);
+  font-size: var(--fs-md);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: var(--transition-fast);
+}
+
+.quantity-selector__btn:hover:not(:disabled) {
+  background-color: var(--color-surface-hover);
+  color: var(--color-accent);
+}
+
+.quantity-selector__btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.quantity-selector__value {
+  min-width: 40px;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+  padding-inline: var(--space-xs);
+}

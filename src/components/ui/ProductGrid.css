@@ -1,0 +1,67 @@
+/* ===================================================================
+   ProductGrid — Responsive Editorial Grid
+   =================================================================== */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+}
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+@media (min-width: 1100px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+  }
+}
+
+/* Staggered card fade-in animation */
+.product-grid__item {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: grid-item-fade 0.5s var(--ease-out) forwards;
+}
+
+@keyframes grid-item-fade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Up to 12 items staggered */
+.product-grid__item:nth-child(1)  { animation-delay: 40ms; }
+.product-grid__item:nth-child(2)  { animation-delay: 80ms; }
+.product-grid__item:nth-child(3)  { animation-delay: 120ms; }
+.product-grid__item:nth-child(4)  { animation-delay: 160ms; }
+.product-grid__item:nth-child(5)  { animation-delay: 200ms; }
+.product-grid__item:nth-child(6)  { animation-delay: 240ms; }
+.product-grid__item:nth-child(7)  { animation-delay: 280ms; }
+.product-grid__item:nth-child(8)  { animation-delay: 320ms; }
+.product-grid__item:nth-child(9)  { animation-delay: 360ms; }
+.product-grid__item:nth-child(10) { animation-delay: 400ms; }
+.product-grid__item:nth-child(11) { animation-delay: 440ms; }
+.product-grid__item:nth-child(12) { animation-delay: 480ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .product-grid__item {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}

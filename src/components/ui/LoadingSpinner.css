@@ -1,0 +1,45 @@
+/* ===================================================================
+   LoadingSpinner — Minimal Editorial Spinner
+   =================================================================== */
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-3xl) var(--space-lg);
+  min-height: 240px;
+}
+
+.loading-spinner__ring {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-accent);
+  animation: spinner-rotate 0.8s linear infinite;
+}
+
+.loading-spinner__text {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  font-weight: var(--fw-medium);
+}
+
+@keyframes spinner-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-spinner__ring {
+    animation: none;
+    border-top-color: var(--color-accent);
+    opacity: 0.7;
+  }
+}

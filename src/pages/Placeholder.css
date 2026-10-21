@@ -1,0 +1,53 @@
+/* ===================================================================
+   Placeholder page — generic styling for milestone-1 stub pages
+   =================================================================== */
+
+.placeholder-page {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-2xl) var(--space-lg);
+}
+
+.placeholder-page__inner {
+  max-width: 520px;
+}
+
+.placeholder-page__eyebrow {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+}
+
+.placeholder-page__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-regular);
+  margin-bottom: var(--space-md);
+}
+
+.placeholder-page__text {
+  font-size: var(--fs-md);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-xl);
+}
+
+/* ── Not-Found page ───────────────────────────────────────────────── */
+.not-found {
+  min-height: 70vh;
+}
+
+.not-found__code {
+  font-family: var(--font-heading);
+  font-size: var(--fs-6xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: var(--space-md);
+}

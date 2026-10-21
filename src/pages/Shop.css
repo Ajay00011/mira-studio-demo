@@ -1,0 +1,47 @@
+/* ===================================================================
+   Shop Page — The Collection
+   =================================================================== */
+
+.shop-page {
+  padding-bottom: var(--space-4xl);
+}
+
+/* ── Hero Banner ──────────────────────────────────────────────────── */
+.shop-hero {
+  padding-block: var(--space-3xl) var(--space-2xl);
+  text-align: center;
+  background: linear-gradient(to bottom, var(--color-bg-alt) 0%, var(--color-bg) 100%);
+  border-bottom: 1px solid var(--color-border-light);
+  margin-bottom: var(--space-2xl);
+}
+
+.shop-hero__eyebrow {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-xs);
+}
+
+.shop-hero__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-regular);
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+}
+
+.shop-hero__description {
+  font-size: var(--fs-md);
+  color: var(--color-text-secondary);
+  max-width: 580px;
+  margin-inline: auto;
+  line-height: var(--lh-relaxed);
+}
+
+@media (min-width: 768px) {
+  .shop-hero__title {
+    font-size: var(--fs-5xl);
+  }
+}
