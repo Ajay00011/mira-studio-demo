@@ -7,9 +7,27 @@ import useScrollReveal from '../hooks/useScrollReveal';
 import './Home.css';
 
 const CATEGORIES = [
-  { slug: 'women',       name: 'Women',       modifier: 'women' },
-  { slug: 'men',         name: 'Men',         modifier: 'men' },
-  { slug: 'accessories', name: 'Accessories', modifier: 'accessories' },
+  {
+    slug: 'women',
+    name: 'Women',
+    modifier: 'women',
+    image: '/category_images/bag.jpg',
+    tagline: 'Effortless tailoring & fluid silhouettes'
+  },
+  {
+    slug: 'men',
+    name: 'Men',
+    modifier: 'men',
+    image: '/category_images/men.jpg',
+    tagline: 'Refined essentials & structured coats'
+  },
+  {
+    slug: 'accessories',
+    name: 'Accessories',
+    modifier: 'accessories',
+    image: '/category_images/accessories.jpg',
+    tagline: 'Sculptural brass & Italian leather'
+  },
 ];
 
 export default function Home() {
@@ -67,16 +85,25 @@ export default function Home() {
           <h2 className="categories__title" id="categories-heading">Shop by Category</h2>
         </div>
         <div className="categories__grid">
-          {CATEGORIES.map(({ slug, name, modifier }) => (
+          {CATEGORIES.map(({ slug, name, modifier, image, tagline }) => (
             <Link
               key={slug}
               to={`/shop?category=${slug}`}
               className={`category-card category-card--${modifier} reveal`}
             >
               <div className="category-card__bg" aria-hidden="true" />
+              {image && (
+                <img
+                  src={image}
+                  alt={`${name} collection`}
+                  className="category-card__image"
+                  loading="lazy"
+                />
+              )}
               <div className="category-card__overlay" aria-hidden="true" />
               <div className="category-card__content">
                 <h3 className="category-card__name">{name}</h3>
+                {tagline && <p className="category-card__tagline">{tagline}</p>}
                 <span className="category-card__cta">
                   Explore →
                 </span>

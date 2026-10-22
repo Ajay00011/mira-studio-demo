@@ -9,6 +9,32 @@ import usePageTransition from '../hooks/usePageTransition';
 import useScrollReveal from '../hooks/useScrollReveal';
 import './Shop.css';
 
+const CATEGORY_META = {
+  all: {
+    eyebrow: 'Mira Studio Curations',
+    title: 'The Collection',
+    description: 'Tailored silhouettes, tactile knitwear, and sculptural accessories. Thoughtfully designed in limited editions with uncompromised craft.'
+  },
+  women: {
+    eyebrow: 'Curated Wardrobe',
+    title: "Women's Collection",
+    description: 'Effortless cashmere knits, fluid mulberry silk slip dresses, and virgin wool tailoring crafted for timeless wear.',
+    image: '/category_images/bag.jpg'
+  },
+  men: {
+    eyebrow: 'Modern Essentials',
+    title: "Men's Collection",
+    description: 'Understated merino knits, utilitarian trench coats, and structured trousers designed with quiet refinement.',
+    image: '/category_images/men.jpg'
+  },
+  accessories: {
+    eyebrow: 'Finishing Touches',
+    title: 'Accessories',
+    description: 'Handcrafted Italian nappa leather goods, sculptural brass jewelry, and Peruvian alpaca scarves.',
+    image: '/category_images/accessories.jpg'
+  }
+};
+
 export default function Shop() {
   const transitionClass = usePageTransition();
   const pageRef = useRef(null);
@@ -110,16 +136,23 @@ export default function Shop() {
     return list;
   }, [selectedCategory, searchQuery, sortOption]);
 
+  const activeMeta = CATEGORY_META[selectedCategory] || CATEGORY_META.all;
+
   return (
     <main className={`main-content shop-page ${transitionClass}`} ref={pageRef}>
       {/* ── Shop Header ───────────────────────────────────────────── */}
-      <section className="shop-hero" aria-labelledby="shop-heading">
-        <div className="container">
-          <p className="shop-hero__eyebrow">Mira Studio Curations</p>
-          <h1 className="shop-hero__title" id="shop-heading">The Collection</h1>
+      <section className={`shop-hero ${activeMeta.image ? 'shop-hero--with-image' : ''}`} aria-labelledby="shop-heading">
+        {activeMeta.image && (
+          <>
+            <img src={activeMeta.image} alt="" className="shop-hero__bg-img" aria-hidden="true" />
+            <div className="shop-hero__overlay" aria-hidden="true" />
+          </>
+        )}
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <p className="shop-hero__eyebrow">{activeMeta.eyebrow}</p>
+          <h1 className="shop-hero__title" id="shop-heading">{activeMeta.title}</h1>
           <p className="shop-hero__description">
-            Tailored silhouettes, tactile knitwear, and sculptural accessories.
-            Thoughtfully designed in limited editions with uncompromised craft.
+            {activeMeta.description}
           </p>
         </div>
       </section>

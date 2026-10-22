@@ -32,24 +32,24 @@ const SEED_ORDERS = [
     total: 360,
     items: [
       {
-        id: 'w1',
+        id: 'mira-w-01',
         name: 'Aria Cashmere Turtleneck',
         slug: 'aria-cashmere-turtleneck',
-        price: 290,
-        selectedColor: 'Camel',
+        price: 245,
+        selectedColor: 'Oatmeal',
         selectedSize: 'M',
         quantity: 1,
-        image: PRODUCTS.find(p => p.id === 'w1')?.image || ''
+        image: PRODUCTS.find(p => p.id === 'mira-w-01')?.image || ''
       },
       {
-        id: 'a4',
-        name: 'Aura Cardholder',
-        slug: 'aura-cardholder',
+        id: 'mira-a-04',
+        name: 'Aura Minimalist Leather Cardholder',
+        slug: 'aura-minimalist-leather-cardholder',
         price: 70,
         selectedColor: 'Caramel',
         selectedSize: 'One Size',
         quantity: 1,
-        image: PRODUCTS.find(p => p.id === 'a4')?.image || ''
+        image: PRODUCTS.find(p => p.id === 'mira-a-04')?.image || ''
       }
     ],
     timeline: [
@@ -116,14 +116,14 @@ const SEED_ORDERS = [
     total: 420,
     items: [
       {
-        id: 'm1',
-        name: 'Merino Wool Oversized Coat',
-        slug: 'merino-wool-oversized-coat',
-        price: 420,
-        selectedColor: 'Oatmeal Melange',
+        id: 'mira-m-02',
+        name: 'Vanguard Relaxed Trench Coat',
+        slug: 'vanguard-relaxed-trench-coat',
+        price: 495,
+        selectedColor: 'British Khaki',
         selectedSize: 'L',
         quantity: 1,
-        image: PRODUCTS.find(p => p.id === 'm1')?.image || ''
+        image: PRODUCTS.find(p => p.id === 'mira-m-02')?.image || ''
       }
     ],
     timeline: [

@@ -121,7 +121,7 @@ export const PRODUCTS = [
     category: 'women',
     price: 245,
     description: 'Spun from grade-A Mongolian cashmere with a relaxed ribbed collar, seamless shoulders, and delicate micro-stitched cuffs. An effortless balance of softness and quiet structure.',
-    image: createProductSvg('Aria Cashmere Turtleneck', 'Women', '#423d38', '#c4a882', 'turtleneck'),
+    image: '/product_images/aria-cashmere-turtleneck.jpg',
     colors: [
       { name: 'Oatmeal', hex: '#d9d2c9' },
       { name: 'Espresso', hex: '#342922' },
@@ -142,7 +142,7 @@ export const PRODUCTS = [
     category: 'women',
     price: 290,
     description: 'Cut on the true bias from heavyweight 22mm mulberry silk charmeuse. Features adjustable delicate rouleau straps, subtle waist contouring, and an ankle-grazing fluid drape.',
-    image: createProductSvg('Lyra Silk Slip Dress', 'Women', '#2f3b39', '#829a95', 'dress'),
+    image: '/product_images/lyra-silk-bias-slip-dress.jpg',
     colors: [
       { name: 'Sage Noir', hex: '#3c4845' },
       { name: 'Champagne', hex: '#e6ded3' },
@@ -163,7 +163,7 @@ export const PRODUCTS = [
     category: 'women',
     price: 520,
     description: 'Masterfully crafted in double-faced virgin wool. Designed with oversized horn buttons, notched lapels, raglan sleeves, and deep welt pockets lined in cupro.',
-    image: createProductSvg('Solstice Wool Coat', 'Women', '#382c23', '#c4a882', 'coat'),
+    image: '/product_images/solstice-double-breasted-wool-coat.avif',
     colors: [
       { name: 'Camel', hex: '#b58f62' },
       { name: 'Onyx', hex: '#1f1e1d' },
@@ -184,7 +184,7 @@ export const PRODUCTS = [
     category: 'women',
     price: 185,
     description: 'Woven from European flax with front pleats and a relaxed wide-leg silhouette. Tailored with clean internal binding, side slip pockets, and a clean hook-and-bar closure.',
-    image: createProductSvg('Paloma Linen Trouser', 'Women', '#4a4742', '#ab9883', 'trousers'),
+    image: '/product_images/paloma-high-rise-linen-trouser.jpg',
     colors: [
       { name: 'Raw Ecru', hex: '#e4dec8' },
       { name: 'Slate Sand', hex: '#78756e' },
@@ -207,7 +207,7 @@ export const PRODUCTS = [
     category: 'men',
     price: 175,
     description: 'An understated everyday staple knit from ultra-fine 19.5-micron Australian merino wool. Naturally thermoregulating, odour-resistant, and finished with ribbed trims.',
-    image: createProductSvg('Kanso Merino Crewneck', 'Men', '#24282e', '#8898aa', 'turtleneck'),
+    image: '/product_images/kanso-merino-crewneck.jpg',
     colors: [
       { name: 'Deep Navy', hex: '#1c2434' },
       { name: 'Heather Moss', hex: '#525a4d' },
@@ -228,7 +228,7 @@ export const PRODUCTS = [
     category: 'men',
     price: 495,
     description: 'A modernised utilitarian silhouette tailored in water-repellent Japanese cotton gabardine. Features storm flap detailing, horn buckle belt, and back vent for graceful motion.',
-    image: createProductSvg('Vanguard Trench Coat', 'Men', '#3b3834', '#bfa98e', 'coat'),
+    image: '/product_images/vanguard-relaxed-trench-coat.jpg',
     colors: [
       { name: 'British Khaki', hex: '#948062' },
       { name: 'Washed Black', hex: '#2a2a2a' }
@@ -248,7 +248,7 @@ export const PRODUCTS = [
     category: 'men',
     price: 160,
     description: 'Woven from sturdy 380gsm organic cotton twill, enzyme-washed for immediate broken-in comfort. Equipped with dual chest patch pockets and tonal corozo nut buttons.',
-    image: createProductSvg('Arc Cotton Overshirt', 'Men', '#383e35', '#9ab097', 'shirt'),
+    image: '/product_images/arc-heavyweight-cotton-overshirt.jpg',
     colors: [
       { name: 'Olive Drab', hex: '#4b5545' },
       { name: 'Unglazed Clay', hex: '#a66b53' },
@@ -269,7 +269,7 @@ export const PRODUCTS = [
     category: 'men',
     price: 210,
     description: 'Tailored in tropical wool blend for year-round breathability. Double forward pleats create an elegant drape, finished with side adjusters and a gentle taper at the hem.',
-    image: createProductSvg('Sartor Pleated Trousers', 'Men', '#2a2829', '#8a8484', 'trousers'),
+    image: '/product_images/sartor-pleated-wide-leg-trousers.jpg',
     colors: [
       { name: 'Charcoal Mélange', hex: '#37373b' },
       { name: 'Espresso', hex: '#3d2e26' },
@@ -292,7 +292,7 @@ export const PRODUCTS = [
     category: 'accessories',
     price: 340,
     description: 'Handcrafted in full-grain Italian nappa leather that softens with each wear. Generous interior fits a 15-inch laptop, lined in durable cotton canvas with magnetic closure.',
-    image: createProductSvg('Sora Leather Tote', 'Accessories', '#362a22', '#c79c6d', 'tote'),
+    image: '/product_images/sora-soft-nappa-leather-tote.jpg',
     colors: [
       { name: 'Saddle Tan', hex: '#9e673a' },
       { name: 'Noir', hex: '#171717' },
@@ -313,7 +313,7 @@ export const PRODUCTS = [
     category: 'accessories',
     price: 95,
     description: 'Solid recycled jeweller’s brass, hand-finished with a brushed satin patina and sealed with a hypoallergenic protective coat. An organic curved form that hugs the wrist comfortably.',
-    image: createProductSvg('Eos Brass Cuff', 'Accessories', '#59441e', '#d4af37', 'cuff'),
+    image: '/product_images/eos-sculptural-brass-cuff.jpg',
     colors: [
       { name: 'Satin Brass', hex: '#c5a059' },
       { name: 'Silver Rhodium', hex: '#cfd2d6' }
@@ -333,7 +333,7 @@ export const PRODUCTS = [
     category: 'accessories',
     price: 135,
     description: 'Woven in Peru from 70% baby alpaca and 30% fine highland wool. Measuring an expansive 200cm × 70cm, finished with 10cm hand-twisted fringing along the borders.',
-    image: createProductSvg('Nomad Alpaca Scarf', 'Accessories', '#3d342f', '#baa28c', 'scarf'),
+    image: '/product_images/nomad-alpaca-fringed-scarf.jpg',
     colors: [
       { name: 'Oatmeal Check', hex: '#cfc4b4' },
       { name: 'Burnt Ochre', hex: '#ab653e' },
@@ -354,7 +354,7 @@ export const PRODUCTS = [
     category: 'accessories',
     price: 70,
     description: 'Vegetable-tanned French calfskin with four exterior card slots and a central folded-currency pocket. Hand-burnished edges and heat-stamped foil branding.',
-    image: createProductSvg('Aura Cardholder', 'Accessories', '#3b2f28', '#b89474', 'cardholder'),
+    image: '/product_images/aura-minimalist-leather-cardholder.jpg',
     colors: [
       { name: 'Caramel', hex: '#a66d3f' },
       { name: 'Black Caviar', hex: '#1c1b1a' },
